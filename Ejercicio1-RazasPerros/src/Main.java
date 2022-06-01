@@ -49,8 +49,15 @@ public class Main {
 //                    break;
 //            }
 //        }
-//    }
+//
+        Scanner leer = new Scanner(System.in);
         ServiciosRaza servR = new ServiciosRaza();
-        Raza r = new Raza();
-        System.out.println("");
+        String respuesta = "";
+        do {
+            servR.crearRazaYAgregar();
+            System.out.println("¿Desea ingresar una raza? (S/N)");
+            respuesta = leer.next();
+        } while (respuesta.equalsIgnoreCase("s"));
+        servR.mostrarLista();
+    }
 }
