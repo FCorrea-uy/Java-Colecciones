@@ -18,38 +18,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        Scanner leer = new Scanner(System.in);
-//        ServiciosRaza servR = new ServiciosRaza();
-//        Raza r = new Raza();
-//        int opcion;
-//
-//        servR.mostrarMenu();
-//        opcion = leer.nextInt();
-//        while (opcion < 5) {
-//            switch (opcion) {
-//                case 1:
-//                    r = servR.crearRaza();
-//                    servR.mostrarMenu();
-//                    opcion = leer.nextInt();
-//                    break;
-//                case 2:
-//                    servR.agregarALista(r);
-//                    servR.mostrarMenu();
-//                    opcion = leer.nextInt();
-//                    break;
-//                case 3:
-//                    servR.mostrarLista();
-//                    servR.mostrarMenu();
-//                    opcion = leer.nextInt();
-//                    break;
-//                case 4:
-//                    servR.cantidadEnLista();
-//                    servR.mostrarMenu();
-//                    opcion = leer.nextInt();
-//                    break;
-//            }
-//        }
-//
+
         Scanner leer = new Scanner(System.in);
         ServiciosRaza servR = new ServiciosRaza();
         String respuesta = "";
