@@ -37,14 +37,20 @@ public class ServiciosRaza {
        }
     }
     
-    public void borrar(){
-        System.out.println("Ingrese una raza para borrarla: ");
+    public void borrar() {
+        Iterator<Raza> it = razas.iterator();
+        int contador = 0;
+        
+        System.out.println("Ingrese una raza para eliminarla: ");
         String nombre = leer.next();
-        Raza aBorrar = new Raza(nombre);
         while (it.hasNext()) {
             Raza aux = it.next();
-            if (aux.getRaza().equalsIgnoreCase(aBorrar.getRaza())) { //Borramos si está la raza ingresada
+            contador++;
+            if (aux.getRaza().equalsIgnoreCase(nombre)) {
                 it.remove();
+            }
+            if(contador == razas.size()){
+                System.out.println("La raza " + nombre + " no estaba en la lista.");
             }
         }
     }
