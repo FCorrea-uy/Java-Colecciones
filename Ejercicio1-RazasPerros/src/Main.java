@@ -28,7 +28,9 @@ public class Main {
             respuesta = leer.next();
         } while (respuesta.equalsIgnoreCase("s"));
         servR.mostrarLista();
+        System.out.println("------------");
         servR.borrar();
-        //servR.mostrarLista();
+        System.out.println("------------");
+        servR.mostrarLista();
     }
 }
