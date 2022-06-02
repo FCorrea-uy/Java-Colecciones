@@ -55,11 +55,5 @@ public class ServiciosRaza {
         }
     }
      
-    public void mostrar2(){
-            while (it.hasNext()) {
-            System.out.print(it.next());
-            System.out.println();
-            }
-    }
     
 }
