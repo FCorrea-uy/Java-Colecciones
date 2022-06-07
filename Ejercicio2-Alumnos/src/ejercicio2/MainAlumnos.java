@@ -28,6 +28,7 @@ public class MainAlumnos {
         System.out.println("Ingrese el nombre de un alumno para calcular su nota final: ");
         String nombreAlumno = leer.next();
         servA.notaFinal(nombreAlumno);
+        
     }
     
 }

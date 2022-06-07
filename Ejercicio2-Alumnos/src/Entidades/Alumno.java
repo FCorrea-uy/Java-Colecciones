@@ -3,27 +3,26 @@ distintos alumnos. La clase Alumno tendrá como atributos, su nombre y una lista
 tipo Integer con sus 3 notas.*/
 package Entidades;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author fatic
  */
 public class Alumno {
     private String nombre;
-    private int nota1;
-    private int nota2;
-    private int nota3;
+    private ArrayList<Double> notas;
 
     //CONSTRUCTORES
     public Alumno() {
     }
 
-    public Alumno(String nombre, int nota1, int nota2, int nota3) {
+    public Alumno(String nombre, ArrayList<Double> notas) {
         this.nombre = nombre;
-        this.nota1 = nota1;
-        this.nota2 = nota2;
-        this.nota3 = nota3;
+        this.notas = notas;
     }
-    
+
+
     //GETTERS AND SETTERS
     public String getNombre() {
         return nombre;
@@ -33,28 +32,12 @@ public class Alumno {
         this.nombre = nombre;
     }
 
-    public int getNota1() {
-        return nota1;
+    public ArrayList<Double> getNotas() {
+        return notas;
     }
 
-    public void setNota1(int nota1) {
-        this.nota1 = nota1;
-    }
-
-    public int getNota2() {
-        return nota2;
-    }
-
-    public void setNota2(int nota2) {
-        this.nota2 = nota2;
-    }
-
-    public int getNota3() {
-        return nota3;
-    }
-
-    public void setNota3(int nota3) {
-        this.nota3 = nota3;
+    public void setNotas(ArrayList<Double> notas) {
+        this.notas = notas;
     }
     
 }

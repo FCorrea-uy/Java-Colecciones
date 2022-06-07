@@ -6,6 +6,7 @@ package Servicios;
 
 import Entidades.Alumno;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 /**
@@ -19,27 +20,34 @@ public class ServiciosAlumno {
     public void crearAlumno(){
         System.out.println("Ingrese el nombre del alumno: ");
         String nombre = leer.next();
-        System.out.println("Ingrese la primer nota: ");
-        int nota1 = leer.nextInt();
-        System.out.println("Ingrese la segunda nota: ");
-        int nota2 = leer.nextInt();
-        System.out.println("Ingrese la tercer nota: ");
-        int nota3 = leer.nextInt();
         
-        listaAlumnos.add(new Alumno(nombre, nota1, nota2, nota3));
+        ArrayList<Double> notas = new ArrayList();
+        System.out.println("Ingrese la primer nota: ");
+        notas.add(leer.nextDouble());
+        System.out.println("Ingrese la segunda nota: ");
+        notas.add(leer.nextDouble());
+        System.out.println("Ingrese la tercer nota: ");
+        notas.add(leer.nextDouble());
+        
+        listaAlumnos.add(new Alumno(nombre, notas));
     }
     
     public void notaFinal(String nombreAlumno){
-        double nota1 = -1, nota2 = -1, nota3 = -1; 
-        for (int i = 0; i <= listaAlumnos.size(); i++){
-            if(listaAlumnos.get(i).getNombre().equalsIgnoreCase(nombreAlumno)){
-                nota1 = listaAlumnos.get(i).getNota1();
-                nota2 = listaAlumnos.get(i).getNota1();
-                nota3 = listaAlumnos.get(i).getNota1();
-                break;
+        double nota = -1; 
+        Iterator<Alumno> it = listaAlumnos.iterator();
+        //Se recorre la lista de alumnos  
+        while(it.hasNext()){
+            Alumno aux = it.next(); //Recorre la lista
+            if (aux.getNombre().equalsIgnoreCase(nombreAlumno)){
+                Iterator<Double> itNotas = aux.getNotas().iterator(); //Se cra un iterator para las notas
+                //Se recorre la lista de notas del alumno pedido
+                while (itNotas.hasNext()){
+                    nota += itNotas.next(); //Se suman las notas de la lista de notas
+                }
             }
         }
-        double prom = (nota1 + nota2 + nota3)/3;
+        nota++;
+        double prom = nota/3;
         if(prom >= 0) {
             System.out.println("La nota final de " +
                     nombreAlumno.toUpperCase() + " es: " + prom);
