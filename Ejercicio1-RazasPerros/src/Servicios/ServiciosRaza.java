@@ -50,6 +50,8 @@ public class ServiciosRaza {
             }
             if(contador == razas.size()){
                 System.out.println("La raza " + nombre + " no estaba en la lista.");
+            } else {
+                System.out.println("La raza " + nombre + " ha sido eliminada.");
             }
         }
     }

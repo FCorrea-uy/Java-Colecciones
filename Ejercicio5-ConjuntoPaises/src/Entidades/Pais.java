@@ -31,30 +31,30 @@ public class Pais implements Comparable<Pais>{
         this.nombrePais = nombre;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 12;
-        hash = 41 * hash + Objects.hashCode(this.nombrePais);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Pais other = (Pais) obj;
-        if (!Objects.equals(this.nombrePais, other.nombrePais)) {
-            return false;
-        }
-        return true;
-    }
+//    @Override
+//    public int hashCode() {
+//        int hash = 12;
+//        hash = 41 * hash + Objects.hashCode(this.nombrePais);
+//        return hash;
+//    }
+//
+//    @Override
+//    public boolean equals(Object obj) {
+//        if (this == obj) {
+//            return true;
+//        }
+//        if (obj == null) {
+//            return false;
+//        }
+//        if (getClass() != obj.getClass()) {
+//            return false;
+//        }
+//        final Pais other = (Pais) obj;
+//        if (!Objects.equals(this.nombrePais, other.nombrePais)) {
+//            return false;
+//        }
+//        return true;
+//    }
 
     
     

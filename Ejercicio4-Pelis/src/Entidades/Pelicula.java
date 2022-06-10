@@ -16,7 +16,7 @@ public class Pelicula {
     public Pelicula() {
     }
 
-    public Pelicula(String titulo, String director, float duracion) {
+    public Pelicula(String titulo, String director, Float duracion) {
         this.titulo = titulo;
         this.director = director;
         this.duracion = duracion;
@@ -43,7 +43,7 @@ public class Pelicula {
         return duracion;
     }
 
-    public void setDuracion(float duracion) {
+    public void setDuracion(Float duracion) {
         this.duracion = duracion;
     }
 

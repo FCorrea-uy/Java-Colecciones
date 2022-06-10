@@ -7,8 +7,6 @@ se le informará al usuario.*/
 package Servicios;
 
 import Entidades.Pais;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.Scanner;
 import java.util.TreeSet;
